@@ -1,0 +1,21 @@
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ll='ls -la'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+PROMT_GREEN=10
+PROMT_BLUE=32
+PROMT_RED=124
+PS1='\e[1;38;5;${PROMT_GREEN}m\u\e[0m:\e[1;38;5;${PROMT_BLUE}m\w\e[1;38;5;${PROMT_RED}m\[$(parse_git_branch)\]\e[0m\$ '
+# without colors
+# PS1='\u@\h:\w$(parse_git_branch)\$ '
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/soul/.sdkman"
+[[ -s "/Users/soul/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/soul/.sdkman/bin/sdkman-init.sh"
