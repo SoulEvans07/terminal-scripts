@@ -1,0 +1,38 @@
+# Full solution ################################
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\e[1;38;5;124m\[$(parse_git_branch)\]\e[0m\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+################################################
+
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+
+B="\[$(tput bold)\]"
+U="\[$(tput setaf 10)\]"
+P="\[$(tput setaf 12)\]"
+R="\[$(tput sgr0)\]"
+
+MACHINE="$(cat /etc/hostname)"
+
+
+short:
+PS1="\[$(tput bold)\]\[$(tput setaf 10)\]$USER@$(cat /etc/hostname)\[$(tput sgr0)\]:\[$(tput bold)\]\[$(tput setaf 12)\]/../\W\[$(tput sgr0)\]$ "
+
+long: 
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+alias short=PROMPT_DIRTRIM=1
+alias long=PROMPT_DIRTRIM=0
+
