@@ -1,0 +1,6 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias cd..='cd ..'
+alias cd...='cd ../..'
+alias shortr=PROMPT_DIRTRIM=1
+alias longr=PROMPT_DIRTRIM=0
