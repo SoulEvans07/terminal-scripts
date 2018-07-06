@@ -1,0 +1,143 @@
+compile - Dependencies for source set 'main'.
+\--- project :UPBSW
+     +--- lightware:Bonjour:1.1.6
+     |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16
+     |         \--- de.jensd:fontawesomefx:8.9
+     +--- lightware:LwLnF:1.0.2
+     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+     +--- lightware:LwWebGateway:1.0.2
+     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+     +--- org.webjars:font-awesome:4.5.0
+     +--- project :AM18xx
+     |    +--- lightware:FtdiWrapper:1.0.1
+     |    +--- lightware:LwSsh:1.0.2
+     |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |    |    +--- lightware:Communication:1.0.6
+     |    |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |    |    |    +--- lightware:RXTX:1.0.+ -> 1.0.2
+     |    |    |    \--- lightware:HidWrapper:1.0.2
+     |    |    |         \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |    |    \--- com.jcraft:jsch:0.1.53
+     |    \--- project :STM32UPB
+     |         +--- lightware:RXTX:1.0.1 -> 1.0.2
+     |         \--- project :UPBScript
+     |              +--- lightware:HidWrapper:1.0.1 -> 1.0.2 (*)
+     |              +--- lightware:Protocol:1.1.14
+     |              |    +--- lightware:Communication:1.0.6 (*)
+     |              |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |              +--- upb:UPBSSigner:1.0.1
+     |              |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |              \--- project :UPBUserInterface
+     |                   +--- upb:GUI:1.0.14
+     |                   |    \--- upb:LightwareFirmwarePackage:1.1.11
+     |                   |         +--- lightware:LwUtilities:1.0.16 (*)
+     |                   |         \--- lightware:DatabaseAccess:1.0.1
+     |                   |              \--- com.oracle:ojdbc6:11.2.0.3.0
+     |                   \--- project :Bootloaders
+     +--- project :ExecUpdate
+     |    +--- lightware:LwSsh:1.0.2 (*)
+     |    \--- project :STM32UPB (*)
+     \--- project :RemoteBootloader
+          \--- project :STM32UPB (*)
+
+default - Configuration for default artifacts.
+\--- project :UPBSW
+     +--- lightware:Bonjour:1.1.6
+     |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16
+     |         \--- de.jensd:fontawesomefx:8.9
+     +--- lightware:LwLnF:1.0.2
+     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+     +--- lightware:LwWebGateway:1.0.2
+     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+     +--- org.webjars:font-awesome:4.5.0
+     +--- project :AM18xx
+     |    +--- lightware:FtdiWrapper:1.0.1
+     |    +--- lightware:LwSsh:1.0.2
+     |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |    |    +--- lightware:Communication:1.0.6
+     |    |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |    |    |    +--- lightware:RXTX:1.0.+ -> 1.0.2
+     |    |    |    \--- lightware:HidWrapper:1.0.2
+     |    |    |         \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |    |    \--- com.jcraft:jsch:0.1.53
+     |    \--- project :STM32UPB
+     |         +--- lightware:RXTX:1.0.1 -> 1.0.2
+     |         \--- project :UPBScript
+     |              +--- lightware:HidWrapper:1.0.1 -> 1.0.2 (*)
+     |              +--- lightware:Protocol:1.1.14
+     |              |    +--- lightware:Communication:1.0.6 (*)
+     |              |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |              +--- upb:UPBSSigner:1.0.1
+     |              |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |              \--- project :UPBUserInterface
+     |                   +--- upb:GUI:1.0.14
+     |                   |    \--- upb:LightwareFirmwarePackage:1.1.11
+     |                   |         +--- lightware:LwUtilities:1.0.16 (*)
+     |                   |         \--- lightware:DatabaseAccess:1.0.1
+     |                   |              \--- com.oracle:ojdbc6:11.2.0.3.0
+     |                   \--- project :Bootloaders
+     +--- project :ExecUpdate
+     |    +--- lightware:LwSsh:1.0.2 (*)
+     |    \--- project :STM32UPB (*)
+     \--- project :RemoteBootloader
+          \--- project :STM32UPB (*)
+
+launch4j
+\--- net.sf.launch4j:launch4j:3.8.0
+     +--- commons-beanutils:commons-beanutils:1.7.0
+     |    \--- commons-logging:commons-logging:1.0.3 -> 1.2
+     +--- commons-logging:commons-logging:1.2
+     +--- net.java.abeille:abeille:3.0
+     |    \--- com.jgoodies:jgoodies-looks:2.5.2
+     |         \--- com.jgoodies:jgoodies-common:1.4.0 -> 1.7.0
+     +--- foxtrot:foxtrot:2.0
+     +--- com.jgoodies:jgoodies-common:1.7.0
+     +--- com.jgoodies:forms:1.2.1
+     +--- com.jgoodies:looks:2.2.2
+     +--- com.thoughtworks.xstream:xstream:1.4.8
+     |    +--- xmlpull:xmlpull:1.1.3.1
+     |    \--- xpp3:xpp3_min:1.1.4c
+     \--- org.apache.ant:ant:1.8.2
+          \--- org.apache.ant:ant-launcher:1.8.2
+
+runtime - Runtime dependencies for source set 'main'.
+\--- project :UPBSW
+     +--- lightware:Bonjour:1.1.6
+     |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16
+     |         \--- de.jensd:fontawesomefx:8.9
+     +--- lightware:LwLnF:1.0.2
+     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+     +--- lightware:LwWebGateway:1.0.2
+     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+     +--- org.webjars:font-awesome:4.5.0
+     +--- project :AM18xx
+     |    +--- lightware:FtdiWrapper:1.0.1
+     |    +--- lightware:LwSsh:1.0.2
+     |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |    |    +--- lightware:Communication:1.0.6
+     |    |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |    |    |    +--- lightware:RXTX:1.0.+ -> 1.0.2
+     |    |    |    \--- lightware:HidWrapper:1.0.2
+     |    |    |         \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |    |    \--- com.jcraft:jsch:0.1.53
+     |    \--- project :STM32UPB
+     |         +--- lightware:RXTX:1.0.1 -> 1.0.2
+     |         \--- project :UPBScript
+     |              +--- lightware:HidWrapper:1.0.1 -> 1.0.2 (*)
+     |              +--- lightware:Protocol:1.1.14
+     |              |    +--- lightware:Communication:1.0.6 (*)
+     |              |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |              +--- upb:UPBSSigner:1.0.1
+     |              |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+     |              \--- project :UPBUserInterface
+     |                   +--- upb:GUI:1.0.14
+     |                   |    \--- upb:LightwareFirmwarePackage:1.1.11
+     |                   |         +--- lightware:LwUtilities:1.0.16 (*)
+     |                   |         \--- lightware:DatabaseAccess:1.0.1
+     |                   |              \--- com.oracle:ojdbc6:11.2.0.3.0
+     |                   \--- project :Bootloaders
+     +--- project :ExecUpdate
+     |    +--- lightware:LwSsh:1.0.2 (*)
+     |    \--- project :STM32UPB (*)
+     \--- project :RemoteBootloader
+          \--- project :STM32UPB (*)

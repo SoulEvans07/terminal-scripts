@@ -1,0 +1,29 @@
+--- test1.txt	Tue Nov 15 14:50:08 2016
++++ test2.txt	Tue Nov 15 14:55:28 2016
+@@ -1,8 +1,7 @@
+ /
+-	.Application = Device
++	.Application = Device Updater
+ 	.Version = 1.2.0b0
+ 	.Revision = dd49499
+-	.Directory = /usr/share/lwr-upb
+ 	.Device = 25G
+ 	/SETTINGS
+ 		.app_library = /usr/share/lwr-firmware
+@@ -10,7 +9,7 @@
+ 		.app_deviceName = 25G
+ 		.app_deviceXml = devices.xml
+ 		.con_acceptedClients = 0
+-		.dev_remoteRelay = false
++		.dev_remoteRelay = true
+ 		:restart()
+ 	/LIBRARY
+ 		:add()
+@@ -110,6 +109,7 @@
+ 				:getBootloadInformation()
+ 				:getUIDInformation()
+ 	/BOOTLOADER
++		.Directory = /usr/share/lwr-upb
+ 		.Status = ready
+ 		.Owner = 
+ 		:claim()

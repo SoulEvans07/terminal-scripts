@@ -1,0 +1,123 @@
+/
+	.Application = Device Updater
+	.Version = 1.2.0b0
+	.Revision = dd49499
+	.Directory = /usr/share/lwr-upb
+	.Device = 25G
+	/SETTINGS
+		.app_library = /usr/share/lwr-firmware
+		.app_port = 6107
+		.app_deviceName = 25G
+		.app_deviceXml = devices.xml
+		.con_acceptedClients = 0
+		.dev_remoteRelay = false
+		:restart()
+	/LIBRARY
+		:add()
+		:remove()
+		/25G_P161107B22_LFP
+			.File = /usr/share/lwr-firmware/25g_p161107b22.lfp
+			.Description = Production package for 25G matrices
+			.Version = p161107b22
+			.LastModified = 1478530564000
+			.ReadLock = 
+			:load()
+			:setReadLock()
+			:isWriteLock()
+		/25G_P161108B24_LED_OK_LFP
+			.File = /usr/share/lwr-firmware/25g_p161108b24_led_ok.lfp
+			.Description = Production package for 25G matrices
+			.Version = p161108b24
+			.LastModified = 1478795012000
+			.ReadLock = 
+			:load()
+			:setReadLock()
+			:isWriteLock()
+		/25G_P161114B27_LFP
+			.File = /usr/share/lwr-firmware/25g_p161114b27.lfp
+			.Description = Production package for 25G matrices
+			.Version = p161114b27
+			.LastModified = 1479129566000
+			.ReadLock = 
+			:load()
+			:setReadLock()
+			:isWriteLock()
+		/25G_P160923B20_LFP
+			.File = /usr/share/lwr-firmware/25g_p160923b20.lfp
+			.Description = Production package for 25G matrices
+			.Version = p160923b20
+			.LastModified = 1478171186000
+			.ReadLock = 
+			:load()
+			:setReadLock()
+			:isWriteLock()
+		/25G_P160907B9_LFP
+			.File = /usr/share/lwr-firmware/25g_p160907b9.lfp
+			.Description = Production package for 25G matrices
+			.Version = p160907b9
+			.LastModified = 1478171090000
+			.ReadLock = 
+			:load()
+			:setReadLock()
+			:isWriteLock()
+		/25G_P161108B24_LFP
+			.File = /usr/share/lwr-firmware/25g_p161108b24.lfp
+			.Description = Production package for 25G matrices
+			.Version = p161108b24
+			.LastModified = 1478603203000
+			.ReadLock = 
+			:load()
+			:setReadLock()
+			:isWriteLock()
+		/25G_P161111B25_LFP
+			.File = /usr/share/lwr-firmware/25g_p161111b25.lfp
+			.Description = Production package for 25G matrices
+			.Version = p161111b25
+			.LastModified = 1478878909000
+			.ReadLock = 
+			:load()
+			:setReadLock()
+			:isWriteLock()
+		/25G_P161107B23_LFP
+			.File = /usr/share/lwr-firmware/25g_p161107b23.lfp
+			.Description = Production package for 25G matrices
+			.Version = p161107b23
+			.LastModified = 1478534815000
+			.ReadLock = 
+			:load()
+			:setReadLock()
+			:isWriteLock()
+	/CLIENTS
+		.LoginRequired = false
+		.AvailableUsers = 
+		:identify()
+		:login()
+		/CLIENT4
+			.IpAddress = 172.24.201.193
+			.ConnectedSince = 2016.11.15 14:37:22
+			/REMOTE
+				.Link = true
+				.ActiveDevice = CPUB1
+				.CPUB = o7;o1;
+				.LSCB = o7;o7;o7;o7;
+				.SB = o7;
+				.XCB = o7;
+				.PCB = o7;
+				.IN = o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;
+				.OUT = o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;o7;
+				.SBC = o7;
+				:execute()
+				:getBootloadInformation()
+				:getUIDInformation()
+	/BOOTLOADER
+		.Status = ready
+		.Owner = 
+		:claim()
+		:addTask()
+		:addSyncTask()
+		:removeTask()
+		:removeAllTask()
+		:moveTask()
+		:run()
+		:runAll()
+		:abort()

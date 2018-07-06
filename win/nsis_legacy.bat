@@ -1,0 +1,1 @@
+start powershell -noexit -Command "docker run -t -i -u 0:0 --rm --init -v D:/Projects/ldu2:/source -v 'D:\VMs\VM Shared:/shared' -v C:/Users/adam.szi.LWR/.m2:/home/gradle/.m2  nsis_legacy bash"

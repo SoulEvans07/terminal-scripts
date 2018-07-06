@@ -1,0 +1,97 @@
+--- 
++++ 
+@@ -1,25 +1,25 @@
+-compile - Compile classpath for source set 'main'.
++compile - Dependencies for source set 'main'.
+ \--- project :UPBSW
+      +--- lightware:Bonjour:1.1.6
+      |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16
+      |         \--- de.jensd:fontawesomefx:8.9
+      +--- lightware:LwLnF:1.0.2
+-     |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
++     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+      +--- lightware:LwWebGateway:1.0.2
+-     |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
++     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+      +--- org.webjars:font-awesome:4.5.0
+      +--- project :AM18xx
+      |    +--- lightware:FtdiWrapper:1.0.1
+      |    +--- lightware:LwSsh:1.0.2
++     |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+      |    |    +--- lightware:Communication:1.0.6
+      |    |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+-     |    |    |    +--- lightware:RXTX:1.0.1
++     |    |    |    +--- lightware:RXTX:1.0.+ -> 1.0.2
+      |    |    |    \--- lightware:HidWrapper:1.0.2
+      |    |    |         \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+-     |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+      |    |    \--- com.jcraft:jsch:0.1.53
+      |    \--- project :STM32UPB
+-     |         +--- lightware:RXTX:1.0.1
++     |         +--- lightware:RXTX:1.0.1 -> 1.0.2
+      |         \--- project :UPBScript
+      |              +--- lightware:HidWrapper:1.0.1 -> 1.0.2 (*)
+      |              +--- lightware:Protocol:1.1.14
+@@ -46,22 +46,22 @@
+      |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16
+      |         \--- de.jensd:fontawesomefx:8.9
+      +--- lightware:LwLnF:1.0.2
+-     |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
++     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+      +--- lightware:LwWebGateway:1.0.2
+-     |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
++     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+      +--- org.webjars:font-awesome:4.5.0
+      +--- project :AM18xx
+      |    +--- lightware:FtdiWrapper:1.0.1
+      |    +--- lightware:LwSsh:1.0.2
++     |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+      |    |    +--- lightware:Communication:1.0.6
+      |    |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+-     |    |    |    +--- lightware:RXTX:1.0.1
++     |    |    |    +--- lightware:RXTX:1.0.+ -> 1.0.2
+      |    |    |    \--- lightware:HidWrapper:1.0.2
+      |    |    |         \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+-     |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+      |    |    \--- com.jcraft:jsch:0.1.53
+      |    \--- project :STM32UPB
+-     |         +--- lightware:RXTX:1.0.1
++     |         +--- lightware:RXTX:1.0.1 -> 1.0.2
+      |         \--- project :UPBScript
+      |              +--- lightware:HidWrapper:1.0.1 -> 1.0.2 (*)
+      |              +--- lightware:Protocol:1.1.14
+@@ -100,28 +100,28 @@
+      \--- org.apache.ant:ant:1.8.2
+           \--- org.apache.ant:ant-launcher:1.8.2
+ 
+-runtime - Runtime classpath for source set 'main'.
++runtime - Runtime dependencies for source set 'main'.
+ \--- project :UPBSW
+      +--- lightware:Bonjour:1.1.6
+      |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16
+      |         \--- de.jensd:fontawesomefx:8.9
+      +--- lightware:LwLnF:1.0.2
+-     |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
++     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+      +--- lightware:LwWebGateway:1.0.2
+-     |    \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
++     |    \--- lightware:LwUtilities:1.0.12 -> 1.0.16 (*)
+      +--- org.webjars:font-awesome:4.5.0
+      +--- project :AM18xx
+      |    +--- lightware:FtdiWrapper:1.0.1
+      |    +--- lightware:LwSsh:1.0.2
++     |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+      |    |    +--- lightware:Communication:1.0.6
+      |    |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+-     |    |    |    +--- lightware:RXTX:1.0.1
++     |    |    |    +--- lightware:RXTX:1.0.+ -> 1.0.2
+      |    |    |    \--- lightware:HidWrapper:1.0.2
+      |    |    |         \--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+-     |    |    +--- lightware:LwUtilities:1.0.14 -> 1.0.16 (*)
+      |    |    \--- com.jcraft:jsch:0.1.53
+      |    \--- project :STM32UPB
+-     |         +--- lightware:RXTX:1.0.1
++     |         +--- lightware:RXTX:1.0.1 -> 1.0.2
+      |         \--- project :UPBScript
+      |              +--- lightware:HidWrapper:1.0.1 -> 1.0.2 (*)
+      |              +--- lightware:Protocol:1.1.14

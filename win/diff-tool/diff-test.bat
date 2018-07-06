@@ -1,0 +1,1 @@
+diff-tool.bat -o test\test1.txt -n test\test2.txt -out out\out
