@@ -1,0 +1,3 @@
+where [command]
+
+searches through folders and files in PATH to show where is the asked [command].
