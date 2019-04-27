@@ -90,5 +90,20 @@ foreach ($bgr in $bgrArray) {
   $count++
 }
 
+"" >> $outFile
+
+"[HKEY_CURRENT_USER\Console\%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe]" >> $outFile
+
+$count = 0
+foreach ($bgr in $bgrArray) {
+  if ($count -lt 10) {
+    $num = "0" + $count
+  } else {
+    $num = $count
+  }
+  """ColorTable" + $num + """=dword:00" + $bgr >> $outFile
+  $count++
+}
+
 """ScreenColors""=dword:00" + $screenColor >> $outFile
 """PopupColors""=dword:00" + $popupColor >> $outFile
