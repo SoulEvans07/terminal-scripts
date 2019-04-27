@@ -2,7 +2,9 @@ import sys
 import os
 import glob
 import argparse
-from PIL import Image
+from PIL import Image, ImageFile
+
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 def_name = 'merged.png'
 def_outpath = f'.{os.sep}{def_name}'
