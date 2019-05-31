@@ -2,19 +2,32 @@ alias cd..='cd ..'
 alias cd...='cd ../..'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ls='ls -G'
 alias ll='ls -la'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+alias shortr=PROMPT_DIRTRIM=1
+alias longr=PROMPT_DIRTRIM=0
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
+set_bash_path() {
+	m_path=`pwd`
+	if [[ $m_path =~ ^$HOME.* ]]; then m_path="~${m_path#$HOME}"; fi
 
-PS1='\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;38;5;32m\]\w\[\033[00m\]\[\033[01;38;5;124m\]$(parse_git_branch)\[\033[00m\]\$ '
+	if [[ $PROMPT_DIRTRIM == 1 ]]; then
+		slash="${m_path//[^\/]}"; count=${#slash};
+		if (( $count >= 3 )); then m_path="${m_path//[a-zA-Z0-9]*\//.../}"; fi
+	fi
+	echo $m_path
+}
+
+PS1='\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;38;5;32m\]$(set_bash_path)\[\033[00m\]\[\033[01;38;5;124m\]$(parse_git_branch)\[\033[00m\]\$ '
 # without colors
 # PS1='\u@\h:\w$(parse_git_branch)\$ '
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/soul/.sdkman"
-[[ -s "/Users/soul/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/soul/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
