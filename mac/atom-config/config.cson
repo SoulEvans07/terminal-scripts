@@ -1,0 +1,37 @@
+"*":
+  core:
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "no"
+    themes: [
+      "afterglow-ui"
+      "afterglow-syntax"
+    ]
+  editor:
+    preferredLineLength: 150
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "9a1242ba-c6cc-4013-a893-450110d21ffc"
+  "linter-ui-default":
+    showPanel: true
+  minimap:
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      "lens-mode": false
+      "lens-modeDecorationsZIndex": 0
+      selection: true
+      selectionDecorationsZIndex: 0
+  "native-ui":
+    tabs:
+      autoResizeTabs: false
+    ui: {}
+  welcome:
+    showOnStartup: false
