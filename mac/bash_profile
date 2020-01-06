@@ -13,15 +13,16 @@ alias longr=PROMPT_DIRTRIM=0
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-set_bash_path() {
-	m_path=`pwd`
-	if [[ $m_path =~ ^$HOME.* ]]; then m_path="~${m_path#$HOME}"; fi
 
-	if [[ $PROMPT_DIRTRIM == 1 ]]; then
-		slash="${m_path//[^\/]}"; count=${#slash};
-		if (( $count >= 3 )); then m_path="${m_path//[a-zA-Z0-9]*\//.../}"; fi
-	fi
-	echo $m_path
+set_bash_path() {
+    m_path=`pwd`
+    if [[ $m_path =~ ^$HOME.* ]]; then m_path="~${m_path#$HOME}"; fi
+
+    if [[ $PROMPT_DIRTRIM == 1 ]]; then
+        slash="${m_path//[^\/]}"; count=${#slash};
+        if (( $count >= 3 )); then m_path="${m_path//[a-zA-Z0-9]*\//.../}"; fi
+    fi
+    echo $m_path
 }
 
 PS1='\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;38;5;32m\]$(set_bash_path)\[\033[00m\]\[\033[01;38;5;124m\]$(parse_git_branch)\[\033[00m\]\$ '
@@ -31,3 +32,5 @@ PS1='\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;38;5;32m\]$(set_bash_path)\[\033[00
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export EDITOR="nano"
