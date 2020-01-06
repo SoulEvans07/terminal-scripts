@@ -1,0 +1,121 @@
+// Settings in here override those in "Default/Default.sublime-commands",
+// https://www.sublimemerge.com/docs/command_palette
+[
+    {
+        "caption": "fetch --tags",
+        "command": "fetch",
+        "args": {"argv": ["t"]}
+    },
+    {
+        "caption": "fetch --tags --prune",
+        "command": "git",
+        "args": {"argv": ["pt"]}
+    },
+
+    
+    {
+        "caption": "Edit Main menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Main.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Actions menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Actions.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Advanced Commit menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Advanced Commit.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Branch menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Branch.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Commit menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Commit.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Diff Context menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Diff Context.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit File Mode Context menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/File Mode Context.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit File menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/File.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Remote Branch menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Remote Branch.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Remote menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Remote.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Stash menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Stash.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Submodule Section menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Submodule Section.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Submodule menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Submodule.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Tag menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Tag.sublime-menu"
+        }
+    },
+    {
+        "caption": "Edit Widget Context menu",
+        "command": "open_in_editor",
+        "args": { 
+            "path": "/Users/Adam_Szi/Library/Application Support/Sublime Merge/Packages/User/Widget Context.sublime-menu"
+        }
+    }
+]

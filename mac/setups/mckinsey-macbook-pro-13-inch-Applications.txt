@@ -1,0 +1,31 @@
+4K YouTube to MP3.app
+Amphetamine.app
+Atom.app
+Bear.app
+Bosca Ceoil.app
+DBngin.app
+GIMP-2.10.app
+Google Chrome.app
+HandBrake.app
+IINA.app
+JetBrains Toolbox.app
+DataGrip.app
+Rider.app
+WebStorm.app
+KeyCastr.app
+Magnet.app
+Microsoft To Do.app
+Minecraft.app
+Notion.app
+Postman.app
+Slack.app
+Spotify.app
+Sublime Merge.app
+Sublime Text.app
+TablePlus.app
+The Unarchiver.app
+Typora.app
+Ukelele.app
+Unity Hub.app
+Visual Studio Code.app
+WavePad.app

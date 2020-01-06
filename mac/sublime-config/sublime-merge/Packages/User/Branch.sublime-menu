@@ -1,0 +1,9 @@
+// https://www.sublimemerge.com/docs/menus
+[
+    {
+        "caption": "Update $branch to origin/$branch",
+        "id": "update_branch",
+        "command": "git",
+        "args": {"argv": ["rb", "$branch"]}
+    }
+]

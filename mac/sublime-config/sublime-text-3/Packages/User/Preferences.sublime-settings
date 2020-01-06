@@ -1,0 +1,18 @@
+{
+	"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
+	"draw_white_space": "all",
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"scroll_past_end": true,
+	"sidebar_row_padding_medium": true,
+	"sidebar_size_12": true,
+	"status_bar_brighter": true,
+	"statusbar_size_13": true,
+	"tabs_medium": true,
+	"tabs_padding_large": true,
+	"theme": "Afterglow-orange.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
