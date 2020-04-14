@@ -1,0 +1,28 @@
+[user]
+	email = szi.adam@simonyi.bme.hu
+	# name = Adam Szi
+	# email = soulevans07@gmail.com
+	name = Soul Evans
+	
+[push]
+	default = simple
+[credential]
+	helper = store
+[merge]
+	tool = kdiff3
+[diff]
+	guitool = kdiff3
+[difftool "kdiff3"]
+	path = /usr/bin/kdiff3
+[core]
+	editor = nano
+	excludesfile = ~/.config/git/.gitignore
+[alias]
+	rb = "!f() { \
+			START=$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'); \
+			git stash --include-untracked;	\
+			git checkout \"$1\";	\
+			git reset --hard \"origin/$1\";	\
+			git checkout $START;	\
+			git stash pop;	\
+		}; f"
