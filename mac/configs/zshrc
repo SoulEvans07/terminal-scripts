@@ -1,0 +1,54 @@
+setopt PROMPT_SUBST
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
+
+is_git() {
+    branch_name=`parse_git_branch`
+    if [[ ! -z "$branch_name" ]] && echo " %F{124}%b(git)" || echo ""
+}
+
+set_bash_path() {
+    m_path=`pwd`
+    if [[ $m_path =~ ^$HOME.* ]]; then m_path="~${m_path#$HOME}"; fi
+
+    if [[ $PROMPT_DIRTRIM == 1 ]]; then
+        slash="${m_path//[^\/]}"; count=${#slash};
+        if (( $count >= 3 )); then m_path="${m_path//[a-zA-Z0-9]*\//.../}"; fi
+    fi
+    echo $m_path
+}
+
+set_bash_device() {
+	m_device='macbook-pro'
+	if [[ $PROMPT_DIRTRIM == 1 ]]; then
+		m_device='mac'
+	fi
+	echo $m_device
+}
+
+# old one line prompt
+# PROMPT='%B%F{118}%n@$(set_bash_device)%f:%F{39}$(set_bash_path)%f%F{124}%b$(parse_git_branch)%f$ '
+precmd() {
+    branch_name=`parse_git_branch`
+    if [[ ! -z "$branch_name" ]]; then
+        print -rP '%f%F{124}%b$(parse_git_branch)' 
+    fi
+}
+PROMPT='%B%F{118}%n@$(set_bash_device)%f:%F{39}$(set_bash_path)$(is_git)%f$ '
+
+PROMPT_DIRTRIM=1
+
+source $HOME/.aliases
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+export PATH="/Applications/Sublime Merge.app/Contents/SharedSupport/bin:$PATH"
+
+export PATH="~/tools/youtube-dlp:$PATH"
+
+export NODE_PATH=`which node`
+export NX_NO_CLOUD=true
