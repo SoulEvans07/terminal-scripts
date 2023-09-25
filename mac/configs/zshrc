@@ -36,7 +36,7 @@ precmd() {
         print -rP '%f%F{124}%b$(parse_git_branch)' 
     fi
 }
-PROMPT='%B%F{118}%n@$(set_bash_device)%f:%F{39}$(set_bash_path)$(is_git)%f$ '
+PROMPT='%B%F{118}%n@$(set_bash_device)%f:%F{39}$(set_bash_path)%b$(is_git)%f$ '
 
 PROMPT_DIRTRIM=1
 
